@@ -2,7 +2,9 @@
   "extends": "../tsconfig.json",
   "include": [
     "integration/*.ts",
+    "integration/*/*.ts",
     "support/*.ts",
-    "../node_modules/cypress"
+    "support/*/*.ts",
+    "../node_modules/cypress", "integration/exercise-2/answer/exercise2.spec.ts"
   ]
 }

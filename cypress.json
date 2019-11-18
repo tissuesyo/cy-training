@@ -1,4 +1,5 @@
 {
+  "$schema": "./cypress.schema.json",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "reportDir": "cypress/report/mochawesome-report",

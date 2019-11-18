@@ -1,5 +1,6 @@
+<h1 class="page-header">Pizza Order</h1>
 <form (ngSubmit)="onSubmit($event)" [formGroup]="parent">
-  <h2 id="detailTitleId" data-cy="detailTitle">Enter your details</h2>
+  <h2 id="detailTitleId" data-test-id="detailTitle">Enter your details</h2>
   <div class="section" formGroupName="details">
     <div class="input">
       <label>
@@ -16,7 +17,7 @@
           Field is required
         </span>
       </label>
-      <input formControlName="name" data-cy="name" type="text" placeholder="John Smith" />
+      <input formControlName="name" data-test-id="name" type="text" placeholder="Tissue Chu" />
     </div>
     <div class="input">
       <label>
@@ -28,11 +29,11 @@
           Field is required
         </span>
       </label>
-      <input formControlName="email" type="email" data-cy="email" placeholder="Enter your email" />
+      <input formControlName="email" type="email" data-test-id="email" placeholder="Enter your email" />
     </div>
     <div class="input">
       <label>
-        Confirm <span class="required">*</span>
+        Confirm Email<span class="required">*</span>
         <span
           *ngIf="parent.get('details').get('confirm').errors && parent.get('details').get('confirm').touched"
           class="error"
@@ -62,7 +63,7 @@
           Emails must match
         </span>
       </label>
-      <input formControlName="confirm" type="email" data-cy="confirmEmail" placeholder="Confirm your email" />
+      <input formControlName="confirm" type="email" data-test-id="confirmEmail" placeholder="Confirm your email" />
     </div>
   </div>
   <div class="section" formGroupName="details">
@@ -95,7 +96,7 @@
           </span>
         </span>
       </label>
-      <input formControlName="address" type="text" data-cy="address" placeholder="44 Pizza Street" />
+      <input formControlName="address" type="text" data-test-id="address" placeholder="Jiufen" />
     </div>
     <div class="input">
       <label>
@@ -126,7 +127,7 @@
           </span>
         </span>
       </label>
-      <input formControlName="postcode" type="text" data-cy="postcode" placeholder="PI3 3AS" />
+      <input formControlName="postcode" type="text" data-test-id="postcode" placeholder="118" />
     </div>
     <div class="input">
       <label>
@@ -138,7 +139,7 @@
           Field is required
         </span>
       </label>
-      <input formControlName="phone" type="text" data-cy="phone" placeholder="01234 567 890" />
+      <input formControlName="phone" type="text" data-test-id="phone" placeholder="0912 1108 77" />
     </div>
   </div>
 
@@ -152,3 +153,24 @@
 
   <app-pizza-summary [parent]="parent" [prices]="prices" [total]="total"> </app-pizza-summary>
 </form>
+
+<div>
+  <h2>Recipe Reference</h2>
+  <table>
+    <tr>
+      <th>Pizza Name</th>
+      <th>Recipe</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Seafood</td>
+      <td>Shrimp, lobster</td>
+      <td><button>Edit</button></td>
+    </tr>
+    <tr>
+      <td>Vegetarian</td>
+      <td>Mushroom</td>
+      <td><button>Edit</button></td>
+    </tr>
+  </table>
+</div>
