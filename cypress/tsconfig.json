@@ -3,6 +3,7 @@
   "include": [
     "integration/*.ts",
     "integration/*/*.ts",
+    "integration/*/*/*.ts",
     "support/*.ts",
     "support/*/*.ts",
     "../node_modules/cypress", "integration/exercise-2/answer/exercise2.spec.ts"

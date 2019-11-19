@@ -1,28 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PizzaValidators } from '../../validators/pizza.validator';
 
 @Component({
   selector: 'app-pizza-app',
   styleUrls: ['./pizza-app.component.scss'],
   template: `
-    <div class="pizza-app">
-      <app-pizza-viewer
-        [pizzas]="form.get('pizzas')"
-        [activePizza]="activePizza"
-      >
-      </app-pizza-viewer>
+    <div class="app">
+      <div class="pizza-app">
+        <app-pizza-viewer [pizzas]="form.get('pizzas')" [activePizza]="activePizza"> </app-pizza-viewer>
 
-      <app-pizza-form
-        [parent]="form"
-        [total]="total"
-        [prices]="prices"
-        (add)="addPizza()"
-        (remove)="removePizza($event)"
-        (toggle)="togglePizza($event)"
-        (submit)="createOrder($event)"
-      >
-      </app-pizza-form>
+        <app-pizza-form
+          [parent]="form"
+          [total]="total"
+          [prices]="prices"
+          (add)="addPizza()"
+          (remove)="removePizza($event)"
+          (toggle)="togglePizza($event)"
+          (submit)="createOrder($event)"
+        >
+        </app-pizza-form>
+      </div>
     </div>
   `
 })
@@ -55,9 +53,7 @@ export class PizzaAppComponent implements OnInit {
 
   ngOnInit() {
     this.calculateTotal(this.form.get('pizzas').value);
-    this.form
-      .get('pizzas')
-      .valueChanges.subscribe(value => this.calculateTotal(value));
+    this.form.get('pizzas').valueChanges.subscribe(value => this.calculateTotal(value));
   }
 
   createPizza() {

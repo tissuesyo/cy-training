@@ -1,0 +1,67 @@
+<header class="headerbar row">
+  <h4 class="container">Query Product</h4>
+</header>
+
+<div class="container">
+  <!-- Query Criteria -->
+  <h5 class="section-div">
+    <i class="fa fa-chevron-circle-down" aria-hidden="true" style="color:#708eff"></i> Criteria
+  </h5>
+  <form class="section-div" [formGroup]="queryForm" novalidate>
+    <div class="form-group row">
+      <label for="brandTfId" class="col-sm-2 col-form-label">Brand: </label>
+      <div class="col-sm-5">
+        <select name="brand" id="brandTfId" class="form-control" formControlName="brand">
+          <option value=""></option>
+          <ng-container *ngFor="let src of brandSrc">
+            <option [value]="src.value">{{ src.label }}</option>
+          </ng-container>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="shipFromTfId" class="col-sm-2 col-form-label">Shipped From: </label>
+      <div class="col-sm-5">
+        <select name="shippedFrom" id="shipFromTfId" class="form-control" formControlName="shippedFrom">
+          <option value=""></option>
+          <option value="domestic">Domestic</option>
+          <option value="overseas">Overseas</option>
+        </select>
+      </div>
+    </div>
+
+    <nav class="navbar footer-btn col-sm-7">
+      <div class="container justify-content-end">
+        <button type="button" class="btn btn-secondary" (click)="reset()">Reset</button>
+        <button type="submit" class="btn btn-primary" style="margin-left: 20px" (click)="clickQueryBtn()">Query</button>
+      </div>
+    </nav>
+  </form>
+
+  <!-- Query Result -->
+  <h5 class="section-div">
+    <i class="fa fa-chevron-circle-down" aria-hidden="true" style="color:#708eff"></i> Query Result
+  </h5>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tr>
+        <th>No</th>
+        <th>Brand</th>
+        <th>Name</th>
+        <th>Shipped From</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngIf="!queryResult || queryResult?.length == 0">
+        <td colspan="5">No records...</td>
+      </tr>
+      <tr *ngFor="let result of queryResult; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ result.brand }}</td>
+        <td>{{ result.name }}</td>
+        <td>{{ result.shippedFrom }}</td>
+        <td>{{ result.price }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

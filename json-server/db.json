@@ -1,0 +1,98 @@
+{
+  "query": [
+    {
+      "brand": "Apple",
+      "name": "iPhone X",
+      "shippedFrom": "domestic",
+      "price": "4,5000"
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 8",
+      "shippedFrom": "domestic",
+      "price": "3,0000"
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 7",
+      "shippedFrom": "overseas",
+      "price": "2,5000"
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 6",
+      "shippedFrom": "overseas",
+      "price": "2,0000"
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S9",
+      "shippedFrom": "overseas",
+      "price": "3,0000"
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S8",
+      "shippedFrom": "overseas",
+      "price": "2,5000"
+    },
+    {
+      "brand": "Samsung",
+      "name": "Note 8",
+      "shippedFrom": "domestic",
+      "price": "2,6000"
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy Tab S",
+      "shippedFrom": "domestic",
+      "price": "2,0000"
+    }
+  ],
+  "apple": [
+    {
+      "brand": "Apple",
+      "name": "iPhone X",
+      "shippedFrom": "domestic",
+      "price": "4,5000"
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 8",
+      "shippedFrom": "domestic",
+      "price": "3,0000"
+    }
+  ],
+  "samsung": [
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S9",
+      "shippedFrom": "overseas",
+      "price": "3,0000"
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S8",
+      "shippedFrom": "overseas",
+      "price": "2,5000"
+    },
+    {
+      "brand": "Samsung",
+      "name": "Note 8",
+      "shippedFrom": "overseas",
+      "price": "2,6000"
+    }
+  ],
+  "brand": [
+    {
+      "id": 1,
+      "label": "Apple",
+      "value": "Apple"
+    },
+    {
+      "id": 2,
+      "label": "Samsung",
+      "value": "Samsung"
+    }
+  ]
+}

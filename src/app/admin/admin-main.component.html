@@ -1,0 +1,72 @@
+<header class="headerbar row">
+  <h4 class="container">Add Product</h4>
+</header>
+<div class="container">
+  <form class="section-div" [formGroup]="prodForm" novalidate>
+    <div class="form-group row">
+      <label for="brandTfId" class="col-sm-2 col-form-label">Brand: </label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="brandTfId" formControlName="brand" />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nameTfId" class="col-sm-2 col-form-label">Product Name: </label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="nameTfId" formControlName="name" />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="shipFromTfId" class="col-sm-2 col-form-label">Shipped From: </label>
+      <div class="col-sm-5">
+        <select name="shippedFrom" id="shipFromTfId" class="form-control" formControlName="shippedFrom">
+          <option value=""></option>
+          <option value="domestic">Domestic</option>
+          <option value="overseas">Overseas</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="priceTfId" class="col-sm-2 col-form-label">Price: </label>
+      <div class="col-sm-5">
+        <input type="number" class="form-control" id="priceTfId" formControlName="price" />
+      </div>
+    </div>
+
+    <nav class="navbar footer-btn col-sm-7">
+      <div class="container justify-content-end">
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button type="submit" class="btn btn-primary" style="margin-left: 20px" (click)="addProduct()">
+          Add
+        </button>
+      </div>
+    </nav>
+  </form>
+
+  <h5 class="section-div">
+    <i class="fa fa-chevron-circle-down" aria-hidden="true" style="color:#708eff"></i> All Product infromation
+  </h5>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tr>
+        <th>No</th>
+        <th>Brand</th>
+        <th>Name</th>
+        <th>Shipped From</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngIf="!prodList || prodList?.length == 0">
+        <td colspan="5">No records...</td>
+      </tr>
+      <tr *ngFor="let result of prodList; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ result.brand }}</td>
+        <td>{{ result.name }}</td>
+        <td>{{ result.shippedFrom }}</td>
+        <td>{{ result.price }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
