@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from './admin.service';
-import { ProdInfoTo } from './prod-info-to';
+import { ProdInfoTo } from './model';
 
 @Component({
   selector: 'app-admin-main',
