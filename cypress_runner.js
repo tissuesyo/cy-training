@@ -16,7 +16,7 @@ const argv = yargs
     spec: {
       alias: 's',
       describe: 'run test with specific spec file',
-      default: 'cypress/integration/*.spec.ts'
+      default: 'cypress/integration/**/*.spec.ts'
     }
   })
   .help().argv;
