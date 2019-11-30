@@ -3,7 +3,7 @@ beforeEach(() => {
   cy.visit('http://localhost:9487/pizza');
 });
 
-describe('Order Pizza Page field naming', () => {
+describe.skip('Order Pizza Page field naming', () => {
   it('Enter your detail field', () => {
     // 1. by class: <h1 class="page-header">Pizza Order</h1>
     cy.get('.page-header').contains('Pizza Order');
@@ -30,7 +30,7 @@ describe('Order Pizza Page field naming', () => {
 });
 
 // TDD style
-context('6. 練習 Interacting With Elements', () => {
+context.skip('6. 練習 Interacting With Elements', () => {
   specify('Interacting With Elements', () => {
     cy.get('button')
       .contains('Add pizza')
@@ -43,7 +43,7 @@ context('6. 練習 Interacting With Elements', () => {
   });
 });
 
-describe('7. element with relationship', () => {
+describe.skip('7. element with relationship', () => {
   it('Within, root, children for form', () => {
     cy.get('form').within(() => {
       cy.get('input[type = "email"]')
@@ -77,7 +77,7 @@ describe('7. element with relationship', () => {
   });
 });
 
-describe.only('8. then() and alias', () => {
+describe.skip('8. then() and alias', () => {
   it('alias', () => {
     cy.get('form').within(() => {
       cy.get('input[type = "email"]').as('emailTf');

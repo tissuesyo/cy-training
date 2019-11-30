@@ -17,21 +17,24 @@ context('Pizza 1 test', () => {
     cy.contains('Enter your details');
     cy.contains('Choose your pizzas');
 
-    cy.get('[data-cy="name"]')
-      .type('Tissue Chu')
-      .then(() => {
-        cy.setResolution([1000, 800]);
-        cy.matchImageSnapshot();
-      });
+    cy.setResolution([1000, 800]);
+    cy.matchImageSnapshot();
+
+    // cy.get('[data-cy="name"]')
+    //   .type('Tissue Chu')
+    //   .then(() => {
+    //     cy.setResolution([1000, 800]);
+    //     cy.matchImageSnapshot();
+    //   });
   });
 
-  it('Detail information form field', () => {
-    cy.get('[data-cy="name"]')
-      .clear()
-      .type('Tissue')
-      .then(() => {
-        cy.setResolution([1000, 720]);
-        cy.matchImageSnapshot();
-      });
-  });
+  // it('Detail information form field', () => {
+  //   cy.get('[data-cy="name"]')
+  //     .clear()
+  //     .type('Tissue')
+  //     .then(() => {
+  //       cy.setResolution([1000, 720]);
+  //       cy.matchImageSnapshot();
+  //     });
+  // });
 });

@@ -1,4 +1,4 @@
-describe('Exercise 4 Network', () => {
+describe.skip('Exercise 4 Network', () => {
   it('Mock query result', () => {
     // enable response stubbing
     // cy.server();

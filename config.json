@@ -1,0 +1,8 @@
+{
+  "reporterEnabled": "mocha-junit-reporter",
+  "mochaJunitReporterReporterOptions": {
+      "mochaFile": "junit-custom.xml"
+  },
+  "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+  "viewportHeight": 2000
+}
