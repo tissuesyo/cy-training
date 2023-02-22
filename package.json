@@ -43,7 +43,7 @@
     "json-server": "^0.15.1",
     "lighthouse": "^5.6.0",
     "ls": "^0.2.1",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mocha-junit-reporter": "^1.23.1",
     "mocha-sonarqube-reporter": "^1.0.1",
     "mochawesome": "^4.1.0",
